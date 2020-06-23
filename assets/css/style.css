@@ -1,0 +1,327 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* Transition 1_1 */
+.transition-1-1{
+    height: 80px;
+    width: 80px;
+    background: red;
+    transition: width 2s;
+}
+.transition-1-1-box:hover .transition-1-1{
+    width: 100%;
+}
+
+
+/* Transition 1_2 */
+.transition-1-2-box{
+    position: relative;
+    height: 200px;
+    background: lightgrey;
+}
+.transition-1-2-r{
+    height: 80px;
+    width: 80px;
+    background: red;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: left 3s;
+}
+.transition-1-2-g{
+    height: 80px;
+    width: 80px;
+    background: green;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    transition: left 2s;
+    transition-delay: 1s;  
+}
+.transition-1-2-box:hover .transition-1-2-r, .transition-1-2-box:hover .transition-1-2-g{
+    left:90%;
+}
+
+
+/* Transform 1_1 */
+.tform-1-1-box{
+    height: 320px;
+    padding-left: 200px;
+}
+.tform-1-1{
+    height: 80px;
+    width: 80px;
+    background: lightcoral;
+    border-radius: 5px;
+    transition: all 1s;
+    transform-origin: bottom left;
+}
+.tform-1-1:hover{
+    height: 160px;
+    width: 160px;
+    border-radius: 10px;
+    transform: rotate(90deg);
+    transform-origin: left;
+}
+
+
+/* Transform 1_2 */
+.tform-1-2-box{
+    height: 150px;
+}
+.tform-1-2-flex{
+    display: flex;
+    justify-content: space-evenly;
+}
+.tform-1-2{
+    height: 80px;
+    width: 80px;
+    background: #4fbb45;
+    color: white;
+    border-radius: 5px;
+    transition: transform 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.late:hover{
+    transform: translate(40px, 40px);
+}
+.lateX:hover{
+    transform: translateX(-40px);
+}
+.lateY:hover{
+    transform: translateY(40px);
+}
+.rotate:hover{
+    transform: rotate(45deg);
+}
+.scale:hover{
+    transform: scale(1.5, 2);
+}
+.skew:hover{
+    transform: skew(20deg, 10deg);
+}
+
+
+/* Transition 2_1 */
+.tsition-2-1-box{
+    position: relative;
+    height: calc(20vh + 40vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tsition-2-1-bild{
+    position: relative;
+    overflow: hidden;
+    height: 30vw;
+    width: 30vw;
+    background: url(https://source.unsplash.com/random) center/cover no-repeat;
+}
+.tsition-2-1-text{
+    position: absolute;
+    height: 30vw;
+    width: 30vw;
+    background: #00000066;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+     transform-origin: bottom;
+    transition: top 1s;
+    top: 100%;
+    /* transition: transform 1s;
+    transform: rotateX(90deg); */
+}
+.tsition-2-1-bild:hover .tsition-2-1-text{
+    top:0;
+    /* transform: rotateX(0deg); */
+}
+
+
+/* Animation 1_1 */
+.ani-1-1-box{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+#s1 {
+    background: #E96574;
+}
+#s2 {
+    background: #F7FE79;
+}
+#s3 {
+    background: #80FFBA;
+}
+.ani-1-1-box a{
+    text-decoration: none;
+    color: #000000;
+    scroll-behavior: smooth;
+}
+.arrow{
+    font-size: 2em;
+    animation: arrow-ani 2s ease 0s infinite;
+}
+@keyframes arrow-ani {
+    0%, 100%{
+        opacity: 0.7;
+        transform: translateY(0);}
+    50% {
+        opacity: 0.1;
+        transform: translateY(20px);}
+}
+  
+
+/* Transition 3_1 */
+.tsition-3-1-box{
+    position: relative;
+    height: 20vh;
+}
+.tsition-3-1-ball1{
+    height: 100px;
+    width: 100px;
+    background: #E57CB5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 2s;
+}
+.tsition-3-1-ball2{
+    position: absolute;
+    top: 50px;
+    left: 200px;
+    height: 50px;
+    width: 50px;
+    background: #3B93B5;
+    border-radius: 50%;
+    transition: transform 2s;
+}
+.tsition-3-1-ball1:active{
+    transform: translate(105px, 0);
+}
+.tsition-3-1-ball1:active + .tsition-3-1-ball2{
+    transition-delay: 1.9s;
+    transform: translate(700px, 0);
+}
+
+
+/* Animation 2_1 */
+.ani-2-1-box{
+    display: flex;
+}
+.ani-2-1-text{
+    height: 450px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dotted lime;
+    animation: strobo 2000ms none infinite;
+}
+@keyframes strobo{
+    0%, 100%{
+        background: white;
+        color: black;
+    }
+    50% {
+        background: black;
+        color: white;
+    }
+}
+.ani-1000ms{
+    animation-duration: 1000ms;
+}
+.ani-500ms{
+    animation-duration: 500ms;
+}
+.ani-250ms{
+    animation-duration: 250ms;
+}
+.ani-125ms{
+    animation-duration: 125ms;
+}
+
+
+/* Animation 3_1 */
+.ani-3-1-box{
+    height: 600px;
+    position: relative;
+}
+.ani-3-1{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 50%;
+    animation-name: four-corners;
+    animation-duration: 4s;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes four-corners {
+    0%, 100% {background: red; left:0px; top:0px;}
+    25%  {background: gold; left:500px; top:0px;}
+    50%  {background: lime; left:500px; top:500px;}
+    75%  {background: blue; left:0px; top:500px;}
+}
+.box-2{
+    animation-delay: 1s;
+}
+.box-3{
+    animation-delay: 2s;
+}
+.box-4{
+    animation-delay: 3s;
+}
+
+
+/* Animation 3_1 */
+.ani-3-2-box{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+}
+.ani-3-2{
+    height: 50px;
+    width: 50px;
+    margin: 25px;
+    animation: oscillate 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes oscillate{
+    0%, 100% {
+        transform: translateY(-50px);
+    }
+    50% {
+        transform: translateY(50px);
+    }
+}
+.box-green{
+    background: green;
+}
+.box-blue{
+    background: blue;
+    animation-delay: 100ms;
+}
+.box-gold{
+    background: gold;
+    animation-delay: 200ms;
+}
+.box-red{
+    background: red;
+    animation-delay: 300ms;
+}
+.box-purple{
+    background: purple;
+    animation-delay: 400ms;
+}
