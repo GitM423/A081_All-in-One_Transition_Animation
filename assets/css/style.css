@@ -249,13 +249,12 @@ html{
     animation-duration: 125ms;
 }
 
-
-/* Animation 3_1 */
-.ani-3-1-box{
+/* Animation 2_2 und Animation 3_1 */
+.ani-2-2-box, .ani-3-1-box{
     height: 600px;
     position: relative;
 }
-.ani-3-1{
+.ani-2-2, .ani-3-1{
     width: 100px;
     height: 100px;
     position: absolute;
@@ -264,7 +263,6 @@ html{
     animation-duration: 4s;
     animation-iteration-count: infinite; 
 }
-
 @keyframes four-corners {
     0%, 100% {background: red; left:0px; top:0px;}
     25%  {background: gold; left:500px; top:0px;}
